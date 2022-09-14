@@ -1,7 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import {useQuery} from "@apollo/client";
+import {GET_MISSIONS } from "./graphql/missions"
+
 
 function App() {
+  const { loading, error, data } = useQuery(GET_MISSIONS);
+  console.log(data);
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +22,7 @@ function App() {
         >
           Learn React
         </a>
+        <h1> Nihad Sopajjjj</h1>
       </header>
     </div>
   );
