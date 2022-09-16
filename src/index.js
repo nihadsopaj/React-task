@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
-import { DataGrid } from '@mui/x-data-grid';
+import { ApolloClient, InMemoryCache, ApolloProvider,  } from '@apollo/client';
+
 
 
 
