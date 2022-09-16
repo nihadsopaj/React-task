@@ -1,17 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-import {useQuery} from "@apollo/client";
-import {GET_MISSIONS } from "./graphql/missions"
-
+import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Home } from "./pages/Home";
+import { Mission } from "./pages/Mission/Mission";
 
 function App() {
-  const { loading, error, data } = useQuery(GET_MISSIONS);
-  console.log(data);
-  return (
-    <div className="App">
-
-    </div>
-  );
+	return (
+		<div className="App">
+			<BrowserRouter>
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/mission/:id" element={<Mission />} />
+				</Routes>
+			</BrowserRouter>
+		</div>
+	);
 }
 
 export default App;

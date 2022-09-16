@@ -1,4 +1,5 @@
 import { gql } from "@apollo/client";
+
 export const GET_MISSIONS = gql`
   query GetMissions {
         missions {
@@ -6,6 +7,9 @@ export const GET_MISSIONS = gql`
           id
           manufacturers
           description
+          wikipedia
+          website
+          twitter
         }
       }
       
